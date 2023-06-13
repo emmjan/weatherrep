@@ -319,3 +319,29 @@ h6 {
   font-size: clamp(30px, 24px + 1.875vw, 60px);
   margin: 0 0 40px 0;
 }
+.weather__form {
+  width: min(100% - 30px, 550px);
+}
+.weather__city {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  margin: 0 0 30px 0;
+}
+.weather__city::-webkit-input-placeholder {
+  text-align: center;
+}
+.weather__city::-moz-placeholder {
+  text-align: center;
+}
+.weather__city:-ms-input-placeholder {
+  text-align: center;
+}
+.weather__city::-ms-input-placeholder {
+  text-align: center;
+}
+.weather__city::placeholder {
+  text-align: center;
+}
