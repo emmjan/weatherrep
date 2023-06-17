@@ -20,13 +20,26 @@
         <h1 class="weather__title">Weather App</h1>
         <form action="" class="weather__form">
             <input type="text" class="weather__city" placeholder="Write city name and press enter">
+            <div class="weather__gps">
+                <img src="assets/img/pin-location-svgrepo-com.svg" alt="">
+            </div>
         </form>
+        <div class="weather__loader">
+            <div class="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="weather__data"></div>
         <!-- <p class="weather__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro expedita optio
             voluptas, animi ducimus maiores blanditiis aperiam consequatur corrupti iure et facere temporibus officiis
             veritatis sapiente accusamus voluptatem quia saepe.</p>
         <button class="weather__btn">test</button>
         <button class="weather__btn weather__btn--dark">test</button> -->
     </section>
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>

@@ -321,14 +321,38 @@ h6 {
 }
 .weather__form {
   width: min(100% - 30px, 550px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 30px 0;
+}
+.weather__gps {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30px;
+          flex: 0 0 30px;
+  height: 30px;
+  padding: 4px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.weather__gps img {
+  display: block;
+  width: 100%;
 }
 .weather__city {
-  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 10px;
   border: none;
   outline: none;
-  border-radius: 20px;
-  margin: 0 0 30px 0;
+  border-radius: 25px;
 }
 .weather__city::-webkit-input-placeholder {
   text-align: center;
@@ -344,4 +368,103 @@ h6 {
 }
 .weather__city::placeholder {
   text-align: center;
+}
+.weather__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.weather__region p, .weather__details p {
+  margin: 0 0 5px 0;
+}
+.weather__region p:last-of-type, .weather__details p:last-of-type {
+  margin: 0;
+}
+.weather__temp {
+  font-size: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.weather__temp span {
+  font-size: 30px;
+  padding: 6px 0 0 0;
+}
+.weather__error {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #860909;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.weather__loader {
+  display: none;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+@-webkit-keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
