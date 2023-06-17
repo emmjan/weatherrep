@@ -1,10 +1,7 @@
 const staticWeatherApp = "weather-app-v1"
 const assets = [
     "/",
-    "index.html",
-    "assets/css/main.css",
-    "assets/js/app.js",
-    "assets/video/thunder.mp4",
+    "index.html"
 ]
 
 self.addEventListener("install", installEvent => {
